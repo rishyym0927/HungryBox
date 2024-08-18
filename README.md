@@ -1,5 +1,8 @@
 <h1 align = "center"> HungryBox </h1>
 
+## Live Website
+Check out the Live Website here: [HungryBox](https://hungrybox-frontend.onrender.com/)
+
 ## Introduction
 HungryBox is a Tiffin Delivery Service Platform built with the MERN stack (MongoDB, Express.js, React, Node.js) and integrated with Stripe for secure payment processing. This project provides a comprehensive solution for managing tiffin orders, user accounts, and administrative tasks.
 
@@ -22,9 +25,6 @@ HungryBox is a Tiffin Delivery Service Platform built with the MERN stack (Mongo
 - **Database Integration**: MongoDB is used for storing user data, orders, and menu items.
 - **Stripe Integration**: Secure payment processing through the Stripe API.
 - **Authentication**: User authentication and authorization with JWT (JSON Web Tokens).
-
-## Live Website
-Check out the Live Website here: [HungryBox](https://hungrybox-frontend.onrender.com/)
 
 ## Project Structure
 The project is organized into three main folders:
