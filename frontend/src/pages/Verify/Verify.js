@@ -29,7 +29,11 @@ const Verify = () => {
       }
     };
 
-    verifyPayment();
+    if (success && orderId) {
+      verifyPayment();
+    } else {
+      // Handle missing query parameters if needed
+      navigate("/"); // Redirect to home if parameters are missing
   }, [url, success, orderId, navigate]); // Added dependencies
 
   return (
