@@ -24,7 +24,7 @@ const MyOrders = () => {
       console.log('Order data:', response.data); // Debug response
       setData(response.data.data);
     } catch (err) {
-      console.error(err);
+      console.error('Error fetching orders:', err);
       setError('Failed to fetch orders. Please try again later.');
     } finally {
       setLoading(false);
@@ -50,7 +50,7 @@ const MyOrders = () => {
             <p>No orders found.</p>
           ) : (
             data.map((order) => (
-              <div key={order.id} className="my-order">
+              <div key={order._id} className="my-order">
                 <img src={assets.parcel_icon} alt="Parcel Icon" />
                 <p>
                   {order.items.map((item, index) => (
