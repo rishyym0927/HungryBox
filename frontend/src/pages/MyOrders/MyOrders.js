@@ -13,13 +13,18 @@ const MyOrders = () => {
   const fetchOrders = useCallback(async () => {
     try {
       setLoading(true);
+      console.log('Fetching orders with token:', token); // Debug token
+      
       const response = await axios.post(
         `${url}/api/order/userorders`,
         {},
         { headers: { token } }
       );
+      
+      console.log('Order data:', response.data); // Debug response
       setData(response.data.data);
     } catch (err) {
+      console.error(err);
       setError('Failed to fetch orders. Please try again later.');
     } finally {
       setLoading(false);
