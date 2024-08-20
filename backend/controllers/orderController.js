@@ -64,6 +64,7 @@ const placeOrder = async (req, res) => {
 const verifyOrder = async (req, res) => {
   console.log('Verify order endpoint hit');
   const { orderId, success } = req.body;
+  
   try {
     if (success == "true") {
       await orderModel.findByIdAndUpdate(orderId, { payment: true });
