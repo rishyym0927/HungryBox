@@ -16,12 +16,12 @@ const MyOrders = () => {
       console.log('Fetching orders with token:', token); // Debug token
       
       const response = await axios.post(
-        `${url}/api/order/userorders`,
+        url + "/api/order/userorders",
         {},
         { headers: { token } }
       );
       
-      console.log('Order data:', response.data); // Debug response
+      console.log('Order data:', response.data.data); // Debug response
       setData(response.data.data);
     } catch (err) {
       console.error('Error fetching orders:', err);
