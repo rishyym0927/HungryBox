@@ -20,7 +20,7 @@ const Verify = () => {
       });
 
       if (response.data.success) {
-        navigate("/myOrders");
+        navigate("/myorders");
       } else {
         navigate("/");
       }
