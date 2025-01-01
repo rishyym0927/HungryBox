@@ -12,7 +12,7 @@
 
 .cart-items-item {
   margin: 10px 0;
-  color: #000;
+  color: #ffffff;
 }
 
 .cart-items-item img {
@@ -49,8 +49,16 @@
   color: #555;
 }
 
+.cart-total-details>b{
+  color: whitesmoke;
+}
+
 .cart-total hr {
   margin: 10px 0;
+}
+
+.cart-total>h2{
+  color: white;
 }
 
 .cart-total button {
@@ -68,7 +76,7 @@
 }
 
 .cart-promo p {
-  color: #555;
+  color: #ffffff;
 }
 
 .cart-promo-input {
