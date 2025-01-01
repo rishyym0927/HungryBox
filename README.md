@@ -1,39 +1,49 @@
 <h1 align = "center"> HungryBox </h1>
 
-## Live Website
-Check out the Live Website here: [HungryBox](https://hungrybox-frontend.onrender.com/) <br>
+## Main Goal
+It is a Food Delivery Like Website as of now.
+I want to make it a scalable solution for Tiffin Delivery Services making it suitable for subscription model and trial users as well.
 
-## Introduction
-HungryBox is a Tiffin Delivery Service Platform built with the MERN stack (MongoDB, Express.js, React, Node.js) and integrated with Stripe for secure payment processing. This project provides a comprehensive solution for managing tiffin orders, user accounts, and administrative tasks.
+## 🔗Live Website
+Explore the live application here: [HungryBox](https://hungrybox-frontend.onrender.com/) <br>
 
-## Features
+## 📖Introduction
+HungryBox is a comprehensive Tiffin Delivery Service Platform developed using the MERN stack (MongoDB, Express.js, React.js, Node.js) and integrated with Stripe for secure payment processing. This project efficiently handles tiffin orders, user accounts, and administrative tasks, ensuring a seamless experience for both users and admins.
+
+## 🔍Features
 ### User Features:
-- **Browse Menu**: Users can view available tiffin plans, menu items, and pricing.
-- **Order Placement**: Users can place their tiffin orders.
-- **Secure Payment**: Integration with Stripe for secure and seamless payment processing.
-- **Order History**: Users can view their past orders and track current ones.
-- **Profile Management**: Users can create and update their profile information.
-- **Responsive Design**: The frontend is responsive and works on both desktop and mobile devices.
+<ul>
+   <li><b>🌎 Browse Menu:</b> Explore various tiffin plans, menu items, and pricing options.</li>
+   <li><b>🍽️ Order Placement:</b> Place orders for your preferred tiffin plans.</li>
+   <li><b>✨ Secure Payment:</b> Leverage Stripe integration for safe and hassle-free payment processing.</li>
+   <li><b>🕜 Order History:</b> Access past orders and track current ones with ease.</li>
+   <li><b>🔐 Profile Management:</b> Update your profile and personal information effortlessly.</li>
+   <li><b>🌐 Responsive Design:</b> Enjoy a seamless experience across desktop and mobile devices.</li>
+</ul>
 
 ### Admin Features:
-- **Dashboard**: Admins have access to an intuitive dashboard for managing orders, users, and menu items.
-- **Order Management**: Admins can view, update, and process orders.
-- **Menu Management**: Admins can add, update, or remove menu items and tiffin plans.
+<ul>
+   <li><b>📊 Dashboard:</b> A user-friendly admin panel to manage orders, users, and menu items.</li>
+   <li><b>📃 Order Management:</b> View, update, and process customer orders.</li>
+   <li><b>🖋️ Menu Management:</b> Add, edit, or delete menu items and tiffin plans with ease.</li>
+</ul>
 
 ### Backend Features:
-- **API Endpoints**: RESTful API endpoints for handling user authentication, order processing, and menu management.
-- **Database Integration**: MongoDB is used for storing user data, orders, and menu items.
-- **Stripe Integration**: Secure payment processing through the Stripe API.
-- **Authentication**: User authentication and authorization with JWT (JSON Web Tokens).
+<ul>
+   <li><b>💻 API Endpoints:</b> RESTful API endpoints for user authentication, order handling, and menu management.</li>
+   <li><b>📂 Database Integration:</b> Store user data, orders, and menu items in MongoDB.</li>
+   <li><b>💳 Stripe Integration:</b> Ensure secure payment processing via the Stripe API.</li>
+   <li><b>🔒 Authentication:</b> Robust authentication and authorization using JWT (JSON Web Tokens).</li>
+</ul>
 
-## Project Structure
+## 🌍Project Structure
 The project is organized into three main folders:
 
-- **`admin`:** Contains the admin panel code, which includes the dashboard and management interfaces.
-- **`frontend`:** The React frontend application, responsible for the user interface and user experience.
-- **`backend`:** The Node.js and Express.js backend, which handles API requests, database interactions, and server-side logic.
+- **`admin`:** Contains the admin panel for managing orders, users, and menu items.
+- **`frontend`:** The React-based frontend application for users.
+- **`backend`:** The Node.js and Express.js backend managing server-side logic and API requests.
 
-## Getting Started
+## 🛠️Getting Started
 To get started with HungryBox, follow these steps:
 
 ### Prerequisites
@@ -96,13 +106,13 @@ To get started with HungryBox, follow these steps:
     ```bash
     npm run dev
 
-## Troubleshooting
+## 🔧Troubleshooting
 If you encounter any issues during the setup, please check the following:
 - Ensure MongoDB is running and accessible.
 - Verify your Stripe credentials and environment variables are correctly set.
 - Check the console output for any error messages and refer to them for troubleshooting.
 
-## Contributing
+## 🌈Contributing
 Contributions are welcome! If you have suggestions or improvements, please follow these steps:
 
 1. **Fork the repository.**
