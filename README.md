@@ -11,7 +11,7 @@ HungryBox is a comprehensive Tiffin Delivery Service Platform developed using th
 
 ## 🔍Features
 ### User Features:
-<ul>
+<ul type="none">
    <li><b>🌎 Browse Menu:</b> Explore various tiffin plans, menu items, and pricing options.</li>
    <li><b>🍽️ Order Placement:</b> Place orders for your preferred tiffin plans.</li>
    <li><b>✨ Secure Payment:</b> Leverage Stripe integration for safe and hassle-free payment processing.</li>
@@ -21,14 +21,14 @@ HungryBox is a comprehensive Tiffin Delivery Service Platform developed using th
 </ul>
 
 ### Admin Features:
-<ul>
+<ul type="none">
    <li><b>📊 Dashboard:</b> A user-friendly admin panel to manage orders, users, and menu items.</li>
    <li><b>📃 Order Management:</b> View, update, and process customer orders.</li>
    <li><b>🖋️ Menu Management:</b> Add, edit, or delete menu items and tiffin plans with ease.</li>
 </ul>
 
 ### Backend Features:
-<ul>
+<ul type="none">
    <li><b>💻 API Endpoints:</b> RESTful API endpoints for user authentication, order handling, and menu management.</li>
    <li><b>📂 Database Integration:</b> Store user data, orders, and menu items in MongoDB.</li>
    <li><b>💳 Stripe Integration:</b> Ensure secure payment processing via the Stripe API.</li>
