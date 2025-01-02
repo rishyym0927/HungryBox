@@ -46,11 +46,11 @@ const Navbar = ({ setShowLogin }) => {
           Mobile App
         </a>
         <a
-          href="#footer"
-          onClick={() => setMenu("contact")}
-          className={menu === "contact" ? "active" : ""}
+        href="#contactus"
+        onClick={() => setMenu("contact")}
+        className={menu === "contact" ? "active" : ""}
         >
-          Contact Us
+          <Link to="/contactus">Contact Us</Link>
         </a>
       </ul>
 
