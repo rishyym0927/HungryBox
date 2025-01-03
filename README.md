@@ -4,7 +4,7 @@
 Managing tiffin services efficiently is a significant challenge for both providers and customers. Providers struggle with handling subscriptions, payments, and order management, while customers often face difficulties in accessing reliable services with transparent pricing and smooth payment processes. HungryBox addresses these issues by providing an integrated platform for managing tiffin orders, subscriptions, and payments seamlessly.
 
 ## 🔗Live Website
-Explore the live application here: [HungryBox](https://hungrybox-frontend.onrender.com/) <br>
+User: [HungryBox](https://hungrybox-frontend.onrender.com/) <br>
 Admin: [HungryBox-Admin](https://hungrybox-admin.onrender.com/)
 
 
