@@ -1,21 +1,40 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect, useCallback } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
-  const [menu, setMenu] = useState("home");
-
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
-
+  const [menu, setMenu] = useState("home");
   const navigate = useNavigate();
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    setToken("");
+  const logout = useCallback(() => {
+    sessionStorage.clear();
+    document.cookie.split(";").forEach(cookie => {
+      document.cookie = cookie
+        .replace(/^ +/, "")
+        .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+    setToken(null);
     navigate("/");
-  };
+  }, [setToken, navigate]);
+
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+    }
+  }, [token, navigate]);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      sessionStorage.clear();
+      setToken(null);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [setToken]);
 
   return (
     <div className="navbar">
@@ -72,7 +91,7 @@ const Navbar = ({ setShowLogin }) => {
         </div>
 
         {!token ? (
-          <button onClick={() => setShowLogin(true)}>Sign Up</button>
+          <button onClick={() => setShowLogin(true)}>Login</button>
         ) : (
           <div className="navbar-profile">
             <img src={assets.profile_icon} alt="" />
