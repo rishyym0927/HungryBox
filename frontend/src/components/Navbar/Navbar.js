@@ -52,6 +52,14 @@ const Navbar = ({ setShowLogin }) => {
         >
           <Link to="/contactus">Contact Us</Link>
         </a>
+
+        <a
+          href="/subscription"
+          onClick={() => setMenu("subscription")}
+          className={menu === "subscription" ? "active" : ""}
+        >
+          Subscription
+        </a>
       </ul>
 
       <div className="navbar-right">
