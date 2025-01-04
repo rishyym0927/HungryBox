@@ -6,6 +6,7 @@
 }
 
 .explore-menu h1 {
+
   color: #eee;
   font-weight: 600;
   text-align: center;
@@ -16,12 +17,14 @@
 
 .explore-menu .explore-menu-text {
   max-width: 80%;
-  color: #808080;
+  color: black;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+
   font-size: 1.1rem;
   margin-bottom: 20px;
+
 }
 
 .explore-menu-list {
@@ -56,14 +59,18 @@
   min-width: 80px;
   cursor: pointer;
   border-radius: 50%;
+
   transition: 0.3s;
+
 }
 
 .explore-menu-list-item p {
   margin-top: 10px;
-  color: #747474;
+  color: #6F4E37;
   font-size: max(1.4vw, 16px);
   cursor: pointer;
+  font-family: pacifico;
+  font-size: 21px;
 }
 
 .explore-menu hr {
