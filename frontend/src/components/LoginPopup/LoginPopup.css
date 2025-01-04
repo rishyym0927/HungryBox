@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-color: #00000090;
   display: grid;
 }
@@ -51,7 +51,7 @@
   padding: 10px;
   border-radius: 4px;
   color: #fff;
-  background-color: rgb(241, 39, 39);
+  background-color: tomato;
   font-size: 15px;
   cursor: pointer;
 }
@@ -67,7 +67,7 @@
   text-align: center;
 }
 .login-popup p span {
-  color: rgb(241, 39, 39);
+  color: tomato;
   font-weight: 500;
   cursor: pointer;
   text-decoration: underline;
@@ -75,7 +75,7 @@
 
 .login-popup-input .forgot-password-link {
   cursor: pointer;
-  color: rgb(241, 39, 39);
+  color: tomato;
   text-align: left;
   font-size: 0.9em;
 }
