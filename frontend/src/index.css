@@ -9,8 +9,10 @@
 }
 
 body {
+  padding-top: 120px;
   min-height: 100vh;
-  background-color: #131313;
+  background-color: #ECB176;
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");
 }
 
 a {
@@ -19,8 +21,9 @@ a {
 }
 
 .app {
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 @keyframes fadeIn {

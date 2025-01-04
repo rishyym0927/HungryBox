@@ -65,7 +65,7 @@ const Navbar = ({ setShowLogin }) => {
       <div className="navbar-right">
         <div className="navbar-search-icon">
           <Link to="/cart">
-            <img src={assets.basket_icon} alt="" />
+            <img src={assets.basket_icon_new} alt="" />
           </Link>
 
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
