@@ -19,8 +19,8 @@ const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className="navbar">
-      <Link to="/">
-        <img src={assets.logo} alt="" className="logo" />
+      <Link to="/" className="navbar-logo">
+        <img src={assets.logo} alt="Logo" />
       </Link>
 
       <ul className="navbar-menu">
@@ -46,9 +46,9 @@ const Navbar = ({ setShowLogin }) => {
           Mobile App
         </a>
         <a
-        href="#contactus"
-        onClick={() => setMenu("contact")}
-        className={menu === "contact" ? "active" : ""}
+          href="#contactus"
+          onClick={() => setMenu("contact")}
+          className={menu === "contact" ? "active" : ""}
         >
           <Link to="/contactus">Contact Us</Link>
         </a>
@@ -65,7 +65,10 @@ const Navbar = ({ setShowLogin }) => {
       <div className="navbar-right">
         <div className="navbar-search-icon">
           <Link to="/cart">
-            <img src={assets.basket_icon} alt="" />
+
+
+            <img src={assets.basket_icon} alt="Cart" />
+
           </Link>
 
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
@@ -75,18 +78,18 @@ const Navbar = ({ setShowLogin }) => {
           <button onClick={() => setShowLogin(true)}>Sign Up</button>
         ) : (
           <div className="navbar-profile">
-            <img src={assets.profile_icon} alt="" />
+            <img src={assets.profile_icon} alt="Profile" />
 
             <ul className="nav-profile-dropdown">
               <li onClick={() => navigate("/myorders")}>
-                <img src={assets.bag_icon} alt="" />
+                <img src={assets.bag_icon} alt="Orders" />
                 <p>Orders</p>
               </li>
 
               <hr />
 
               <li>
-                <img src={assets.logout_icon} alt="" />
+                <img src={assets.logout_icon} alt="Logout" />
                 <p onClick={logout}>Logout</p>
               </li>
             </ul>
