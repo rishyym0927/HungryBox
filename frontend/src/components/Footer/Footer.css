@@ -1,13 +1,17 @@
 .footer {
+
+
   background-color: #131313;
   padding: 3.5rem 0 2rem;
   border-top: 1px solid #222222;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+
 }
 
 .footer-content {
@@ -17,6 +21,105 @@
   margin-bottom: 2.5rem;
 }
 
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff5f03;
+  margin-bottom: 1rem;
+  animation: slideIn 0.5s ease-out;
+}
+
+.brand-desc {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  background-color: #ff5f03;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background-color: #ff4800;
+}
+
+.social-link img {
+  width: 0.9rem;
+  height: 0.9rem;
+  filter: invert(1);
+
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+
+
+.nav-column ul li {
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.nav-column ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.nav-column ul li a:hover {
+  color: #ff5f03;
+}
+
+.footer-title {
+  color: #ff5f03;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.newsletter-form {
+  width: 100%;
+}
+
+.input-group {
+
+.footer-left .logo {
+  height: 65%;
+  width: 30%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+
+=======
 .company-name {
   font-size: 1.5rem;
   font-weight: 700;
@@ -32,6 +135,7 @@
 }
 
 .social-links {
+
   display: flex;
   gap: 0.75rem;
 }
@@ -144,10 +248,15 @@
   transform: translateY(-1px);
 }
 
+
+
+
 .footer-bottom {
   text-align: center;
   padding-top: 1.5rem;
   border-top: 1px solid #222222;
+
+  animation: fadeIn 0.8s ease-out;
 }
 
 .footer-bottom p {
@@ -156,6 +265,10 @@
 }
 
 @media (max-width: 900px) {
+
+
+@media (max-width: 750px) {
+
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
@@ -179,4 +292,41 @@
   .footer {
     padding: 2.5rem 0 1.5rem;
   }
+
 }
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+=======
+}
+
