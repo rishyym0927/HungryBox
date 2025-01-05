@@ -1,22 +1,41 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState, useEffect, useCallback } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
+  const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const [menu, setMenu] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
-
   const navigate = useNavigate();
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    setToken("");
+  const logout = useCallback(() => {
+    sessionStorage.clear();
+    document.cookie.split(";").forEach(cookie => {
+      document.cookie = cookie
+        .replace(/^ +/, "")
+        .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+    setToken(null);
     navigate("/");
-  };
+  }, [setToken, navigate]);
+
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+    }
+  }, [token, navigate]);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      sessionStorage.clear();
+      setToken(null);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [setToken]);
 
   return (
     <div className="navbar">
@@ -74,20 +93,25 @@ const Navbar = ({ setShowLogin }) => {
 
         {!token ? (
           <button onClick={() => setShowLogin(true)} className="auth-button">
-            Sign Up
+            Login
           </button>
         ) : (
           <div className="navbar-profile">
             <img src={assets.profile_icon} alt="Profile" />
-
             <ul className="nav-profile-dropdown">
-              <li onClick={() => navigate("/myorders")}>Orders</li>
+              <li onClick={() => navigate("/myorders")}>
+                <img src={assets.bag_icon} alt="" />
+                <p>Orders</p>
+              </li>
               <hr />
-              <li onClick={logout}>Logout</li>
+              <li>
+                <img src={assets.logout_icon} alt="" />
+                <p onClick={logout}>Logout</p>
+              </li>
             </ul>
           </div>
         )}
-
+        
         <button
           className="menu-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
