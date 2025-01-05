@@ -27,8 +27,7 @@
 
 
 
-.header-title {
-=======
+
 .header-content span{
   color: rgb(241, 39, 39);
   font-size: 60px;
@@ -62,7 +61,7 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   opacity: 0; /* Initially hidden for animation */
   animation: fadeIn 2s 1.5s forwards; /* Delayed fade-in for description */
-=======
+
   font-size: 1.3vw;
 
 
