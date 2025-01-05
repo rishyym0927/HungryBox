@@ -12,6 +12,8 @@ const addFood = async (req, res) => {
     price: req.body.price,
     image: image_filename,
     category: req.body.category,
+    day: req.body.day, // e.g., "Thursday"
+    timeSlot: req.body.timeSlot, // e.g., "Lunch"
   });
 
   try {
@@ -22,6 +24,7 @@ const addFood = async (req, res) => {
     res.json({ success: false, message: "Error" });
   }
 };
+
 
 // All Food List
 const listFood = async (req, res) => {
